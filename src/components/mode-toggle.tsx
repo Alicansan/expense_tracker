@@ -14,7 +14,7 @@ function ModeToggle() {
       <Button
         variant="outline"
         size="icon"
-        className="absolute right-0 top-0 m-2 rounded-full p-2 transition-colors dark:hover:bg-gray-800 dark:hover:text-gray-100"
+        className="absolute bottom-0 right-0 m-2 rounded-full p-2 transition-colors dark:hover:bg-gray-800 dark:hover:text-gray-100"
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
