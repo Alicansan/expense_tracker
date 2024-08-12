@@ -9,7 +9,7 @@ export default async function Balance() {
       <h4 className="text-2xl font-bold">Your Balance</h4>
       <h1 className="font-mono text-xl font-semibold">
         {" "}
-        ${addCommas(balance ?? 0)}
+        ${addCommas(Number(balance?.toFixed(2)) ?? 0)}
       </h1>
     </>
   );

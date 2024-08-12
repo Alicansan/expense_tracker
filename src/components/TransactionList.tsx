@@ -1,6 +1,8 @@
 import React from "react";
 import { Transaction } from "@/types/Transaction";
 import getTransactions from "@/app/actions/getTransactions";
+import TransactionItem from "./TransactionItem";
+
 export default async function TransactionList() {
   const { transactions, error } = await getTransactions();
 
@@ -13,7 +15,11 @@ export default async function TransactionList() {
       <ul>
         {transactions &&
           transactions.map((transaction: Transaction, index) => (
-            <p key={index}>{transaction.text}</p>
+            <TransactionItem
+              key={transaction.id}
+              transaction={transaction}
+              index={index}
+            />
           ))}
       </ul>
     </>
